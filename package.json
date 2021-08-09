@@ -1,0 +1,33 @@
+{
+  "name": "scshipdeals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon --config nodemon.json src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "local": "sudo npm i -g && sc",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "bin": {
+    "sc": "./lib/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/figlet": "^1.5.4",
+    "@types/node": "^16.4.13",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^8.1.0",
+    "figlet": "^1.5.0",
+    "path": "^0.12.7"
+  }
+}
