@@ -1,1 +1,45 @@
-node_modules/
+node_modules
+bower_components
+dist
+build
+.DS_Store
+.idea
+newrelic.js
+*.log
+*.mp4
+.eslintcache
+.npmrc
+yarn.lock
+fonts
+tinymceLangs
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Java class files
+*.class
+
+# Local test files
+HTTPCompomentsBISTrustStore
+automation/tests/test-output
+/test-output
+
+# Emacs Stuffs
+.tern-port
+*.org
+automation/tests/dependency-reduced-pom.xml
+
+# Unit Test Coverage
+.nyc_output/
+coverage/
+
+# Test Files
+report.html
+results.xml

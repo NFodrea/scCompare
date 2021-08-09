@@ -4,30 +4,50 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon --config nodemon.json src/index.ts",
-    "create": "npm run build && npm run test",
-    "build": "tsc -p .",
-    "local": "sudo npm i -g && sc",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
-  },
-  "bin": {
-    "sc": "./lib/index.ts"
+    "lint": "eslint . --ext js,jsx,ts,tsx --cache --max-warnings 0",
+    "prettier:check": "prettier . --config .prettierrc.js --check",
+    "prettier:write": "prettier . --config .prettierrc.js --write",
+    "start": "snowpack dev",
+    "tsc": "tsc --incremental",
+    "build": "snowpack build --clean",
+    "generate-css-types": "tailwindcss-classnames -i tailwind.config.js -o src/types/tailwindcss-classnames.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/figlet": "^1.5.4",
     "@types/node": "^16.4.13",
     "nodemon": "^2.0.12",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
-    "clear": "^0.1.0",
-    "commander": "^8.1.0",
-    "figlet": "^1.5.0",
-    "path": "^0.12.7"
+    "@snowpack/plugin-react-refresh": "^2.3.9",
+    "@snowpack/plugin-typescript": "^1.1.1",
+    "@types/classnames": "^2.2.11",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.1.11",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "autoprefixer": "^10.2.1",
+    "classnames": "^2.2.6",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "snowpack": "^3.0.11",
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-classnames": "^2.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   }
 }

@@ -22,4 +22,3 @@ export const printHighestCCU = (val1: Pick<UpgradeCCU, "price">, val2: Pick<Upgr
 export const printLowestCCU = (val1: Pick<UpgradeCCU, "price">, val2: Pick<UpgradeCCU, "price">) => {
     return val1.price - val2.price;
 }
-
